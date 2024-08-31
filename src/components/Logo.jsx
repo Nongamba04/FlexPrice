@@ -4,7 +4,7 @@ import {useState} from "react"
 export default function Logo() {
 return (
 <>
-<div className="p-2">
+<div className="pl-8">
             <a href="#" className="flex gap-3">
               <svg
                 width="45"
