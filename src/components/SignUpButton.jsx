@@ -2,7 +2,7 @@
 export default function SignUpButton() {
 return (
 <>
-<button class="flex items-center gap-2 p-2 text-lg font-bold text-white bg-blue-600 rounded-2xl transition duration-200 hover:bg-gray-700 group">
+<button class="flex items-center justify-center gap-2 p-2 text-lg font-bold text-white bg-blue-600 rounded-2xl transition duration-200 hover:bg-gray-700 group">
     Sign up
     <div class="flex items-center justify-center">
     <div class="relative w-2.5 h-0.5 bg-blue-600 transition-transform duration-200 ease-in-out transform group-hover:bg-white group-hover:translate-x-1">
