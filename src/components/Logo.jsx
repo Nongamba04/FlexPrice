@@ -1,7 +1,7 @@
 import {useState} from "react"
 
 
-export default function Logo() {
+export default function Logo({children}) {
 return (
 <>
             <a href="#" className="p-3 md:pl-8 flex items-center gap-3">
@@ -18,9 +18,7 @@ return (
                   fill="white"
                 />
               </svg>
-              <span className="self-center text-[1.75rem] font-semibold whitespace-nowrap text-white">
-                FlexPrice
-              </span>
+              {children}
             </a>
 
 </>

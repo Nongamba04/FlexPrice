@@ -18,7 +18,11 @@ function NavLinks() {
       {navItems.map((item, index) => (
         <NavLink
           key={index}
-          className={`font-bold text-lg ${item.to == "/login" ? "" :  "text-white hover:text-black hover:bg-gray-400 p-2 transition-all ease-in-out duration-300 rounded-2xl hover:translate-y-[-7px] "}`}
+          className={`font-bold text-lg ${
+            item.to == "/login"
+              ? ""
+              : "text-white hover:text-black hover:bg-gray-400 p-2 transition-all ease-in-out duration-300 rounded-2xl hover:translate-y-[-7px] "
+          }`}
           to={item.to}
         >
           {item.label}
@@ -27,7 +31,6 @@ function NavLinks() {
     </>
   );
 }
-
 
 export default function Navbar() {
   const [isUsed, setIsUsed] = useState(false);
@@ -38,11 +41,15 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className="mx-auto  bg-black sticky top-0 z-20 w-full ">
+      <nav className="mx-auto  bg-gray-900 sticky top-0 z-20 w-full border-b-2 ">
         <div className="flex items-center justify-between flex-wrap">
-          <Logo/>
+          <Logo>
+            <span className="self-center text-[1.75rem] font-semibold whitespace-nowrap text-white">
+              FlexPrice
+            </span>
+          </Logo>
 
-          <div className="hidden md:flex items-center justify-between p-3 w-[50%] md:w-[48%]  m-3 ">
+          <div className="hidden md:flex items-center justify-evenly p-3 w-[50%] md:w-[48%]  m-3 ">
             <NavLinks />
           </div>
 
