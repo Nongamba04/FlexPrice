@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import image2 from "../assets/Image2.jpg";
 import image3 from "../assets/Image3.jpg";
+import Faqs from "../components/FAQs";
 
 const Title = styled.section`
   width: 100%;
@@ -57,6 +58,8 @@ export default function Home() {
         dolore modi, est mollitia quisquam a iure blanditiis, aut illo molestiae
         officia saepe aspernatur ducimus voluptates. Ad exercit.
       </Hero>
+
+      <Faqs/>
       
       <Footer/>
 

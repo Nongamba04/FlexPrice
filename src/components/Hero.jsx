@@ -4,8 +4,8 @@ import Button from "../components/Button";
 export default function Hero({ image, Title, children }) {
   return (
     <>
-      <main className="bg-white  flex justify-center">
-        <div className="container min-h-[400px] flex items-center">
+      <main className="  flex justify-center m-4">
+        <div className="container min-h-[400px] flex items-center bg-[#f1f2f2] rounded-3xl p-4 shadow-xl">
           <div className="grid grid-cols-2 place-items-center">
             {/* image */}
             <div className=" w-[17em] md:w-[22em] lg:w-[30em]">
