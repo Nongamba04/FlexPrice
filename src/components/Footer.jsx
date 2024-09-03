@@ -9,8 +9,7 @@ export default function Footer() {
   return (
     <>
       <footer
-        className="relative flex justify-center w-full bg-cover"
-        style={{ backgroundImage: "url('../src/assets/Image4.jpg')" }}
+        className="relative flex justify-center w-full bg-cover bg-[url('../src/assets/Image4.jpg')]"
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
           
@@ -21,7 +20,7 @@ export default function Footer() {
             <img src={Logo} alt="" className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-18 lg:h-18 xl:w-20 xl:h-20" />
               <h1 className="text-xl md:text-4xl font-bold text-white">Create A Request</h1>
               <p className="text-white text-sm md:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, neque?</p>
-              <div className="relative w-[170px] md:w-[35rem] group">
+              <div className="relative w-[170px] md:w-[32rem] group">
                 <input
                   className="bg-[#222630] px-4 py-3 outline-none w-full text-white rounded-lg border-2 transition-colors duration-100 border-solid
                    focus:border-[#596A95] border-[#2B3040] pr-12"

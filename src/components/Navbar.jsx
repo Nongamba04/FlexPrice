@@ -45,20 +45,19 @@ export default function Navbar() {
       <nav className="mx-auto  bg-gray-900 sticky top-0 z-20 w-full border-b-2 ">
         <div className="flex items-center justify-between flex-wrap">
           <Logo>
-            <span className="self-center text-[1.75rem] font-semibold whitespace-nowrap text-white">
+            <span className="self-center text-[1.5rem] font-semibold whitespace-nowrap text-white">
               FlexPrice
             </span>
           </Logo>
 
-          <div className="hidden md:flex items-center justify-evenly p-3 w-[50%] md:w-[48%]  m-3 ">
+          <div className="hidden md:flex items-center justify-evenly p-2 w-[50%] md:w-[48%]  m-3 ">
             <NavLinks />
           </div>
 
           {/* Hamburger Button */}
           <button
             onClick={toggleButton}
-            className="md:hidden mr-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2
-             focus:ring-blue-300 rounded-lg inline-flex items-center justify-center"
+            className="md:hidden mr-3 text-gray-400 hover:text-gray-900 rounded-lg inline-flex items-center justify-center"
           >
             <span
               className={`transition-transform duration-300 ease-in-out transform ${

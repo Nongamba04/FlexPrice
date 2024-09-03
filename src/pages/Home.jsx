@@ -31,14 +31,7 @@ const Title = styled.section`
     font-size: 2rem;
   }
 
-  & h1 {
-    font-weight: bold;
-    font-size: 4rem;
-  }
-
-  & h2 {
-    font-size: 1rem;
-  }
+  
 `;
 
 export default function Home() {
@@ -46,8 +39,8 @@ export default function Home() {
     <>
       <Navbar />
       <Title image={image}>
-        <h1>DYNAMIC PRICING PLATFORM</h1>
-        <h2>
+        <h1 className="font-bold text-[1em] md:text-[4em]">DYNAMIC PRICING PLATFORM</h1>
+        <h2 className="text-sm">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque
           aperiam blanditiis dolores?
         </h2>
@@ -60,7 +53,7 @@ export default function Home() {
       <Hero
         image={image2}
         Title={"Real Time Data integration for dynamic pricing."}
-        direction={"left"}
+        direction={"up"}
       >
         <span className="block mb-4 text-sm md:text-base text-wrap">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
@@ -80,7 +73,7 @@ export default function Home() {
         Title={
           "Simulate Pricing Strategies and Analyze Financial Impact with Ease."
         }
-        direction={"right"}
+        direction={"up"}
       >
         <span className="block mb-4 text-sm md:text-base text-wrap">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
@@ -94,7 +87,7 @@ export default function Home() {
         Title={
           "Simulate Pricing Strategies and Analyze Financial Impact with Ease."
         }
-        direction={"left"}
+        direction={"down"}
       >
         <span className="block mb-4 text-sm md:text-base text-wrap">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
