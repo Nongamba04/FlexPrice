@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Logo from "./Logo";
 import SentSvg from "../assets/Sent_arrow.svg";
 import Github from '../assets/Github.svg'
 import LinkedIn from '../assets/linkedin.svg'
 import Facebook from '../assets/facebook.svg'
+import Logo from '../assets/logo.svg'
 
 export default function Footer() {
   return (
@@ -13,13 +13,13 @@ export default function Footer() {
         style={{ backgroundImage: "url('../src/assets/Image4.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-
+          
         <div className="relative container z-10 min-h-[22em] ">
           <div className="grid grid-cols-2 place-items-center m-5">
             <div className="flex flex-col md:w-[60rem] p-[1em] md:p-[2em] gap-[1em]">
-              <Logo></Logo>
-
-              <h1 className="text-xl md:text-4xl text-white">Create A Request</h1>
+    
+            <img src={Logo} alt="" className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-18 lg:h-18 xl:w-20 xl:h-20" />
+              <h1 className="text-xl md:text-4xl font-bold text-white">Create A Request</h1>
               <p className="text-white text-sm md:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, neque?</p>
               <div className="relative w-[170px] md:w-[35rem] group">
                 <input
@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col md:w-full p-10 gap-10 items-center justify-center text-white bg-transparent rounded-xl bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-60 ">
-                <h2 className="text-lg font-semibold uppercase text-gray">
+                <h2 className="text-lg font-bold uppercase text-gray">
                   Follow Us
                 </h2>
                 <ul>
@@ -59,7 +59,7 @@ export default function Footer() {
                       className="hover:underline text-lg flex items-center gap-2"
                     >
                         <img src={Facebook} className="w-5 h-5" />
-                     LinkedIn
+                     Facebook
                     </a>
                   </li>
                   <li className="mb-4">

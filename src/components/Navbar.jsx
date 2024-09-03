@@ -1,6 +1,7 @@
 import Logo from "./Logo";
 import HamMenu from "./Hamburger_Menu";
 import SignUpButton from "./SignUpButton";
+import X from '../assets/x-symbol.svg'
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -61,10 +62,10 @@ export default function Navbar() {
           >
             <span
               className={`transition-transform duration-300 ease-in-out transform ${
-                isUsed ? "rotate-45" : "rotate-0"
+                isUsed ? "rotate-90" : "rotate-0"
               }`}
             >
-              {isUsed ? "X" : <HamMenu />}
+              {isUsed ? <img src={X} alt="" className="w-6 h-6"/> : <HamMenu />}
             </span>
           </button>
 
