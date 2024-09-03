@@ -6,12 +6,13 @@ import Login from './pages/Login'
 import Tools from './pages/Tools'
 import Dashboard from './pages/Dashboard'
 import Strategies from './pages/Strategies'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div>
     <BrowserRouter>
       <Routes>
         <Route index element={<Home/>}/>
@@ -22,7 +23,8 @@ function App() {
         <Route path="/strategies" element={<Strategies />} />
       </Routes>
     </BrowserRouter>
-    </>
+    <SpeedInsights/>
+    </div>
   )
 }
 
