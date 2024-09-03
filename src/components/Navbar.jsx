@@ -19,7 +19,7 @@ function NavLinks() {
       {navItems.map((item, index) => (
         <NavLink
           key={index}
-          className={`font-bold text-lg ${
+          className={`font-bold text-base ${
             item.to == "/login"
               ? ""
               : "text-white hover:text-black hover:bg-gray-400 p-2 transition-all ease-in-out duration-300 rounded-2xl hover:translate-y-[-7px] "
@@ -45,7 +45,7 @@ export default function Navbar() {
       <nav className="mx-auto  bg-gray-900 sticky top-0 z-20 w-full border-b-2 ">
         <div className="flex items-center justify-between flex-wrap">
           <Logo>
-            <span className="self-center text-[1.5rem] font-semibold whitespace-nowrap text-white">
+            <span className="self-center text-[1rem] font-semibold whitespace-nowrap text-white">
               FlexPrice
             </span>
           </Logo>
