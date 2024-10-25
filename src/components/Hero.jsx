@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Button from "../components/Button";
 
-export default function Hero({ image, Title, direction, children }) {
+export default function Hero({ image, Title, direction,buttonTitle, children }) {
   return (
     <>
       <main className="flex justify-center m-4">
@@ -33,7 +33,7 @@ export default function Hero({ image, Title, direction, children }) {
             <div className="flex flex-col items-center md:items-start">
               <h1 className="text-xl md:text-4xl font-bold mb-7">{Title}</h1>
               {children}
-              <Button text={"Learn More"} color={"white"} />
+              <Button text={buttonTitle} color={"white"} />
             </div>
           </div>
         </motion.div>

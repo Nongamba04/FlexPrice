@@ -6,7 +6,7 @@ return (
 <>
             <a href="#" className="p-3 md:pl-8 flex items-center gap-3 ">
               <svg
-                className="w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-18 lg:h-18 xl:w-20 xl:h-20"
+                className="w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-15 xl:h-15"
                 viewBox="0 0 54 68"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
