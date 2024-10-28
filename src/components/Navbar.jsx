@@ -60,8 +60,7 @@ export default function Navbar() {
             </Logo>
 
 
-          {/* Search Bar for Desktop View */}
-            <Search wantSearch={wantSearch} />
+          
           
 
           {/* Links and Sign Up Button for Desktop View */}
@@ -71,14 +70,6 @@ export default function Navbar() {
 
           {/* Mobile Search and Hamburger Menu */}
           <div className="flex items-center gap-3 md:hidden">
-            {/* Search Icon for Mobile View */}
-            <button
-              onClick={toggleSearchButton}
-              className="text-gray-400 hover:text-gray-100 rounded-lg w-7 h-7"
-            >
-              <img src={SearchIcon} alt="Search" />
-            </button>
-
             {/* Hamburger Button for Mobile View */}
             <button
               onClick={toggleButton}

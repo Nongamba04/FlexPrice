@@ -6,10 +6,10 @@ import image3 from "../assets/Image3.jpg";
 import axios from "axios";
 
 export default function ProductPage() {
-  // const location = useLocation();
-  // const [searchParams] = useSearchParams();
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [error, setError] = useState(null);
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
   
   // Initialize state with both loading and data properties
   const [productData, setProductData] = useState({
@@ -64,76 +64,76 @@ export default function ProductPage() {
   };
 
   // Use useEffect to set the dummy data when component mounts
-  useEffect(() => {
-    setProductData(dummyProductData);
-  }, []);
-  // Get product URL and data from navigation state
-  // const productUrl = location.state?.productUrl;
-  // const initialData = location.state?.productData;
-  // const queryParam = searchParams.get('query');
-
   // useEffect(() => {
-  //   const fetchProductDetails = async () => {
-  //     setIsLoading(true);
-  //     setError(null);
+  //   setProductData(dummyProductData);
+  // }, []);
+  // Get product URL and data from navigation state
+  const productUrl = location.state?.productUrl;
+  const initialData = location.state?.productData;
+  const queryParam = searchParams.get('query');
 
-  //     try {
-  //       // If we already have the data from the search page, use it
-  //       if (initialData) {
-  //         setProductData(initialData);
-  //         setIsLoading(false);
-  //         return;
-  //       }
+  useEffect(() => {
+    const fetchProductDetails = async () => {
+      setIsLoading(true);
+      setError(null);
 
-  //       // Otherwise fetch the data using the URL
-  //       if (productUrl) {
-  //         const res = await axios.get('your_api_endpoint', {
-  //           params: { url: productUrl },
-  //         });
+      try {
+        // If we already have the data from the search page, use it
+        if (initialData) {
+          setProductData(initialData);
+          setIsLoading(false);
+          return;
+        }
+
+        // Otherwise fetch the data using the URL
+        if (productUrl) {
+          const res = await axios.get('your_api_endpoint', {
+            params: { url: productUrl },
+          });
           
-  //         if (res.data) {
-  //           setProductData(res.data);
-  //         } else {
-  //           setError('No product data found');
-  //         }
-  //       } else {
-  //         setError('No product URL provided');
-  //       }
-  //     } catch (err) {
-  //       setError(err.message || 'Error fetching product details');
-  //       console.error('Error fetching product details:', err);
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   };
+          if (res.data) {
+            setProductData(res.data);
+          } else {
+            setError('No product data found');
+          }
+        } else {
+          setError('No product URL provided');
+        }
+      } catch (err) {
+        setError(err.message || 'Error fetching product details');
+        console.error('Error fetching product details:', err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  //   fetchProductDetails();
-  // }, [productUrl, initialData]);
+    fetchProductDetails();
+  }, [productUrl, initialData]);
 
-  // if (isLoading) {
-  //   return (
-  //     <>
-  //       <Navbar />
-  //       <div className="flex items-center justify-center min-h-screen">
-  //         <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
-  //       </div>
-  //     </>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <>
+        <Navbar />
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+        </div>
+      </>
+    );
+  }
 
-  // if (error) {
-  //   return (
-  //     <>
-  //       <Navbar />
-  //       <div className="flex items-center justify-center min-h-screen">
-  //         <div className="text-red-500 text-center">
-  //           <h2 className="text-2xl font-bold mb-2">Error Loading Product</h2>
-  //           <p>{error}</p>
-  //         </div>
-  //       </div>
-  //     </>
-  //   );
-  // }
+  if (error) {
+    return (
+      <>
+        <Navbar />
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-red-500 text-center">
+            <h2 className="text-2xl font-bold mb-2">Error Loading Product</h2>
+            <p>{error}</p>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
