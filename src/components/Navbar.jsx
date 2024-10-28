@@ -22,7 +22,7 @@ function NavLinks() {
         <NavLink
           key={index}
           className={`font-bold text-base ${
-            item.to === "/login"
+            item.to === "/register"
               ? ""
               : "text-white hover:text-black hover:bg-gray-400 p-2 transition-all ease-in-out duration-300 rounded-2xl hover:translate-y-[-7px]"
           }`}
