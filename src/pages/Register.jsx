@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link , useNavigate} from "react-router-dom";
+import { useCookies } from "react-cookie";
 
 import axios from "axios";
 
 export default function Login() {
   const navigate = useNavigate()
+
+  const [cookies, setCookie, removeCookie] = useCookies(['user'])
   const [formData, setFormData] = useState({
     fullName: "",
     userName: "",
@@ -25,14 +28,31 @@ export default function Login() {
 
     try {
       // Example URL for registration API
+      setCookie("user", {
+        email: formData.email
+      }, {
+        path: "/", // Cookie available across all paths
+        maxAge: 86400, // 24 hours
+        sameSite: "strict", // Protect against CSRF
+        secure: process.env.NODE_ENV === "production", // Use secure in production
+      });
+
       const res = await axios.post(
         "http://localhost:3000/users/register",
         formData
       );
 
-      if (res.data.success) {
+      if (res.data.success) { 
+        // setCookie("user", {
+        //   email: formData.email
+        // }, {
+        //   path: "/", // Cookie available across all paths
+        //   maxAge: 86400, // 24 hours
+        //   sameSite: "strict", // Protect against CSRF
+        //   secure: process.env.NODE_ENV === "production", // Use secure in production
+        // });
         console.log("Form submitted", formData);
-        navigate("/Home")
+        // navigate("/Home")
       } 
       else{
         console.log("Form submission failed");
@@ -42,6 +62,14 @@ export default function Login() {
       console.log(err);
     }
   };
+
+  useEffect(() => {
+    if (cookies.user && cookies.user.email) {
+      navigate("/home");
+    }
+  }, [cookies, navigate]);
+
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-900 p-6">
