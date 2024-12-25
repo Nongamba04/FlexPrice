@@ -70,6 +70,7 @@ export default function SearchPage() {
         timeout: 30000,
       });
 
+
       if (res.data) {
         setCallbackData(res.data);
       } else {
@@ -98,7 +99,8 @@ export default function SearchPage() {
       const interval = setInterval(async () => {
         try {
           const response = await axios.get(`/api/callback-data/${requestId}`);
-          if (response.data) {
+         
+          if (response.data.flag === 1) {
             setCallbackData(response.data);
             clearInterval(interval); 
             navigate("/productResult", {
@@ -110,6 +112,10 @@ export default function SearchPage() {
               search: `?query=${encodeURIComponent(response.data.name || "product")}`,
             });
           }
+          else{
+            setIsLoading(true);
+          }
+
         } catch (error) {
           console.error('Error fetching callback data:', error);
         }

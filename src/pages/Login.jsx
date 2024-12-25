@@ -40,6 +40,7 @@ export default function Login() {
           "user",
           {
             email: formData.email,
+            isSubscribe: formData.isSubscribe
           },
           {
             path: "/", // Cookie available across all paths

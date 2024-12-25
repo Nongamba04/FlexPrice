@@ -13,6 +13,7 @@ export default function Login() {
     userName: "",
     email: "",
     password: "",
+    isSubscribe: false
   });
 
   const handleChange = (e) => {
@@ -29,7 +30,8 @@ export default function Login() {
     try {
       // Example URL for registration API
       setCookie("user", {
-        email: formData.email
+        email: formData.email,
+        isSubscribe: formData.isSubscribe
       }, {
         path: "/", // Cookie available across all paths
         maxAge: 86400, // 24 hours

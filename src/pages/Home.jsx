@@ -10,6 +10,7 @@ import Hero2 from "../components/Hero2";
 import Footer from "../components/Footer";
 import Faqs from "../components/FAQs";
 import Card from "../components/Card";
+import PricingCard from "../components/Pricing_Card";
 import image from "../assets/image.png";
 import image2 from "../assets/Image2.jpg";
 import image3 from "../assets/Image3.jpg";
@@ -39,16 +40,22 @@ const HomeContent = () => (
   <>
     <Navbar />
     <Title image={image}>
-      <h1 className="font-bold text-[1em] md:text-[4em]">
-        DYNAMIC PRICING PLATFORM
-      </h1>
-      <h2 className="text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aperiam
-        blanditiis dolores?
-      </h2>
-      <div className="flex gap-10">
-        <Button text={"Learn More"} />
-        <SignUpButton />
+      <div className="flex items-center justify-between gap-2">
+        <div>
+          <h1 className="font-bold text-[1em] md:text-[4em]">
+            DYNAMIC PRICING PLATFORM
+          </h1>
+          <h2 className="text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque
+            aperiam blanditiis dolores?
+          </h2>
+          <div className="flex gap-10">
+            <Button text={"Learn More"} />
+            <SignUpButton />
+          </div>
+        </div>
+        <PricingCard/>
+
       </div>
     </Title>
 
@@ -58,9 +65,9 @@ const HomeContent = () => (
       direction={"up"}
     >
       <span className="block mb-4 text-sm md:text-base text-wrap">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci sint quo
-        laboriosam porro suscipit? Corrupti, harum omnis deserunt esse dolore
-        modi, est mollitia quisquam a iure blanditiis, aut illo mo.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci sint
+        quo laboriosam porro suscipit? Corrupti, harum omnis deserunt esse
+        dolore modi, est mollitia quisquam a iure blanditiis, aut illo mo.
       </span>
 
       <div className="flex gap-3 items-center">
@@ -71,25 +78,29 @@ const HomeContent = () => (
 
     <Hero
       image={image3}
-      Title={"Simulate Pricing Strategies and Analyze Financial Impact with Ease."}
+      Title={
+        "Simulate Pricing Strategies and Analyze Financial Impact with Ease."
+      }
       direction={"up"}
     >
       <span className="block mb-4 text-sm md:text-base text-wrap">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci sint quo
-        laboriosam porro suscipit? Corrupti, harum omnis deserunt esse dolore
-        modi, est mollitia quisquam a iure blanditiis, aut illo mo.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci sint
+        quo laboriosam porro suscipit? Corrupti, harum omnis deserunt esse
+        dolore modi, est mollitia quisquam a iure blanditiis, aut illo mo.
       </span>
     </Hero>
 
     <Hero2
       image={image5}
-      Title={"Simulate Pricing Strategies and Analyze Financial Impact with Ease."}
+      Title={
+        "Simulate Pricing Strategies and Analyze Financial Impact with Ease."
+      }
       direction={"down"}
     >
       <span className="block mb-4 text-sm md:text-base text-wrap">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci sint quo
-        laboriosam porro suscipit? Corrupti, harum omnis deserunt esse dolore
-        modi, est mollitia quisquam a iure blanditiis, aut illo mo.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci sint
+        quo laboriosam porro suscipit? Corrupti, harum omnis deserunt esse
+        dolore modi, est mollitia quisquam a iure blanditiis, aut illo mo.
       </span>
 
       <div className="flex gap-3 items-center">
